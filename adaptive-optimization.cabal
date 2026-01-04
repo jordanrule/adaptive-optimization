@@ -1,0 +1,26 @@
+cabal-version:      2.4
+name:               adaptive-optimization
+version:            0.1.0.0
+synopsis:           Modernizing Hoopl with Deep Learning Techniques
+description:        
+    A pedagogical exploration of how modern optimization techniques from
+    deep learning can enhance traditional compiler dataflow analysis,
+    building on the foundational work of Hoopl by Norman Ramsey,
+    João Dias, and Simon Peyton Jones.
+
+license:            BSD-3-Clause
+author:             Inspired by Hoopl authors
+maintainer:         educational@example.com
+category:           Compilers
+build-type:         Simple
+
+executable optimize
+    main-is:          Main.hs
+    other-modules:    AdaptiveDataflow
+                    , ShapeIndexedGraph
+                    , Examples
+    build-depends:    base ^>=4.14
+                    , containers ^>=0.6
+    hs-source-dirs:   .
+    default-language: Haskell2010
+    ghc-options:      -Wall -O2
